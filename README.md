@@ -2,3 +2,5 @@ PHP MySQL Sample [![Build Status](https://apibeta.shippable.com/projects/537a855
 ================
 
 Demonstrates MySQL usage and testing with PHP.
+
+This sample is built for Shippable, a docker based continuous integration and deployment platform.

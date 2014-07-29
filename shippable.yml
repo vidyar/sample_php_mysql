@@ -6,7 +6,8 @@ php:
 before_script: 
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
-  - mysql -e 'create database if not exists test;'
+  - mysql -e 'drop database if exists test;'
+  - mysql -e 'create database if not exists `some-test`;'
 
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage test.php

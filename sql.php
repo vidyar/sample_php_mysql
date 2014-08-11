@@ -1,7 +1,7 @@
 <?php
 class SQL {
   public static function main() {
-    $con=mysqli_connect("127.0.0.1","shippable","","some-test");
+    $con=mysqli_connect("127.0.0.1","root","","some-test");
     $q="DROP TABLE IF EXISTS things";
     mysqli_query($con, $q);
     $q="CREATE TABLE things (name varchar(20))";

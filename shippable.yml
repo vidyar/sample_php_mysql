@@ -3,7 +3,6 @@ language: php
 php: 
   - 5.4
 
-reset_minion: true
 
 before_script: 
   - mkdir -p shippable/testresults

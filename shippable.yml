@@ -13,6 +13,7 @@ before_script:
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage some-test.php
 
+
 archive: true
 
 notifications:

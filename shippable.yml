@@ -9,6 +9,7 @@ before_script:
   - mysql -e 'drop database if exists test;'
   - mysql -e "create database if not exists \`some-test\`;"
 
+
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage some-test.php
 
@@ -20,5 +21,6 @@ notifications:
       - vidya@shippable.com
       - buildsampletest@gmail.com
 #cache: true
+
 after_script:
   - cp README.md ./shippable

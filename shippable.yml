@@ -9,7 +9,7 @@ before_script:
   - mysql -e 'drop database if exists test;'
   - mysql -e "create database if not exists \`some-test\`;"
 
-script
+script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage some-test.php
 
 

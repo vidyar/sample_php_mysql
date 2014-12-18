@@ -28,3 +28,6 @@ notifications:
 
 after_script:
   - cp README.md ./shippable
+
+after_success:
+  - git push -f git@heroku.com:php-mysql-heroku-buildsample.git $BRANCH

@@ -1,11 +1,12 @@
 language: php
 
-build_image: shippable/minv2:beta
+build_image: shippable/minv2
 
 php: 
   - 5.4
   - 5.5
-
+env:
+ - foo=var
 
 before_script: 
   - mkdir -p shippable/testresults
@@ -16,6 +17,7 @@ before_script:
 
 
 script:
+  - echo $foo
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage some-test.php
 
 

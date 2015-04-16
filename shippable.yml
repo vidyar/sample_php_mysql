@@ -27,6 +27,7 @@ notifications:
    email:
       - vidya@shippable.com
       - buildsampletest@gmail.com
+      
 #cache: true
 
 after_script:
@@ -34,3 +35,4 @@ after_script:
 
 #after_success:
  # - git push -f git@heroku.com:php-mysql-heroku-buildsample.git $BRANCH
+#test

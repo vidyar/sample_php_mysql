@@ -5,6 +5,7 @@ build_image: shippable/minv2
 php: 
   - 5.4
   - 5.5
+
 env:
  - foo=var
 
@@ -15,11 +16,9 @@ before_script:
   - mysql -e "create database if not exists \`some-test\`;"
   - mysql -ushippable -e "show variables like '%version';"
 
-
 script:
   - echo $foo
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage some-test.php
-
 
 archive: true
 

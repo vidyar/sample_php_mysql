@@ -1,10 +1,8 @@
 language: php
 
-
 php: 
   - 5.4
   - 5.5
-
 
 before_script: 
   - mkdir -p shippable/testresults
@@ -13,10 +11,8 @@ before_script:
   - mysql -e "create database if not exists \`some-test\`;"
   - mysql -ushippable -e "show variables like '%version';"
 
-
 script:
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage some-test.php
-
 
 archive: true
 

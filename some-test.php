@@ -5,7 +5,7 @@ class SQLTest extends PHPUnit_Framework_TestCase {
     $sql = new SQL();
     $doc = $sql->main();
     
-    $this->assertNotEquals($doc, false);
+    $this->assertNotEquals($doc, true);
   }
 }
 ?>

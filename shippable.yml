@@ -20,7 +20,7 @@ script:
   - echo $foo
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage some-test.php
 
-archive: true
+#archive: true
 
 notifications:
    email:

@@ -21,6 +21,7 @@ before_script:
   - mysql -ushippable -e "show variables like '%version';"
   - echo $sec
 
+
 script:
   - echo $foo
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage some-test.php

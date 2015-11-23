@@ -7,7 +7,8 @@ php:
   - 5.5
 
 env:
- - foo=var
+ global:
+  - foo=var
 
 before_script: 
   - mkdir -p shippable/testresults

@@ -9,6 +9,8 @@ php:
 env:
  global:
   - foo=var
+ matrix:
+  - secure: JJ2yWuhd4X6sx6gYdFITkl9ljfeceVoCagagRoYEPNmsmH1XwEG3yA7DAXFGUlVZr1iG8D89Gg7FE+mr0vwzsNbOrSYOHeeSLRKXysG4xNsSXzxZ550wkjjP9EqNKd8OTqM1iVJ0+tT0XAg1YAEM3mWvYGyBwjb7iO6dBMbuOeVWkpNkggfWorejr9T2SOyh80huRqaFd0evSBg2L9ZZgwlYBbibPp9FSNtlWUuRuiBz3xjetEPl//x4yKXLhO+81ObgLLurCSjjZECoZmdxjwjJPDdkz95Majy9PR7UomyDgnQmtYMRqAWpJLM0OrpKnnzphEPPqBUEOci1x2E2yQ==
 
 before_script: 
   - mkdir -p shippable/testresults
@@ -16,6 +18,7 @@ before_script:
   - mysql -e 'drop database if exists test;'
   - mysql -e "create database if not exists \`some-test\`;"
   - mysql -ushippable -e "show variables like '%version';"
+  - echo $sec
 
 script:
   - echo $foo

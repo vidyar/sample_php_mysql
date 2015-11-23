@@ -46,3 +46,4 @@ after_script:
 matrix:
   exclude:
     - php: 5.5
+      test3=111

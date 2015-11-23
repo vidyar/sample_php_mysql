@@ -9,6 +9,7 @@ php:
 env:
  global:
   - foo=var
+  - var1=111
  matrix:
   - secure: JJ2yWuhd4X6sx6gYdFITkl9ljfeceVoCagagRoYEPNmsmH1XwEG3yA7DAXFGUlVZr1iG8D89Gg7FE+mr0vwzsNbOrSYOHeeSLRKXysG4xNsSXzxZ550wkjjP9EqNKd8OTqM1iVJ0+tT0XAg1YAEM3mWvYGyBwjb7iO6dBMbuOeVWkpNkggfWorejr9T2SOyh80huRqaFd0evSBg2L9ZZgwlYBbibPp9FSNtlWUuRuiBz3xjetEPl//x4yKXLhO+81ObgLLurCSjjZECoZmdxjwjJPDdkz95Majy9PR7UomyDgnQmtYMRqAWpJLM0OrpKnnzphEPPqBUEOci1x2E2yQ==
 
@@ -35,6 +36,7 @@ notifications:
 
 after_script:
   - cp README.md ./shippable
+  - echo $var1
 
 #after_success:
  # - git push -f git@heroku.com:php-mysql-heroku-buildsample.git $BRANCH
